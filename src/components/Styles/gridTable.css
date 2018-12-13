@@ -1,0 +1,31 @@
+.gridTable_Root{
+    display: grid;
+    width: 90vw;
+    max-height: 85vh;
+    grid-column-gap: 1px;
+    grid-row-gap: 1px;
+    background:#9e9e9e;
+    border: 1px solid #9e9e9e;
+    overflow: auto;
+    margin-left: auto;
+    margin-right:auto;
+}
+
+.gridTable_HeaderCell{
+    height:40px;
+    background: #066b56;
+    text-align: center;
+    line-height: 40px;
+    color: white;
+    text-transform: uppercase;
+    padding: 0 15px;
+}
+.gridTable_DataCell{
+    height:auto;
+    background: white;
+    text-align: center;
+    padding: 5px 10px;
+    /* line-height: 2px; */
+    /* overflow: hidden; */
+    /* color: white; */
+}

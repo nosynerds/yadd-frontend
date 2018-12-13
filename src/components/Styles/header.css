@@ -1,0 +1,28 @@
+#pageHeader{
+    width: 100vw;
+    border-bottom: 1px solid grey;
+    height: 10vh;
+    max-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    
+}
+
+.mainMenu{
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    flex-direction: row;
+    align-content: space-between;
+    
+    
+}
+
+.mainMenu li{
+    padding: 10px 15px;
+    background: grey;
+    margin: 2px;
+}
+
