@@ -13,7 +13,10 @@ class Column extends React.Component {
 
       componentDidMount(){
         //Making the api call to fetch data.
-        let endpoint = config.baseUrl+'fetchColumn?item_id=1';
+        if(this.props.location.search === ""){
+          this.props.history.push('/');
+        }
+        let endpoint = config.baseUrl+'fetchColumn'+this.props.location.search;
         fetch(endpoint)
           .then((response)=>{
             return response.json();
@@ -32,8 +35,8 @@ class Column extends React.Component {
       return (
         <div>
           <Header/>
-          <p></p>
-          <br/>
+          <h2 className="pageHead">COLUMNS</h2>
+          
           {table}
         </div>
       );

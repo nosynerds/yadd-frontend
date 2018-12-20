@@ -9,13 +9,7 @@ class Header extends React.Component {
             <div>
               <h1>YADD <span style={{fontSize:'16px'}}>v0.01</span></h1>
             </div>
-            {/* <Router> */}
-            <ul className="mainMenu">
-              <li><Link to="/">Schema</Link></li>
-              <li><Link to="/table">Table</Link></li>
-              <li><Link to="/column">Column</Link></li>
-            </ul>
-            {/* </Router> */}
+            
         </div>
       );
     }

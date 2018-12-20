@@ -13,6 +13,7 @@ class Schema extends React.Component {
 
     componentDidMount(){
       //Making the api call to fetch data.
+      //Hard coding value for now, Needs to be wired properly
       let endpoint = config.baseUrl+'fetchSchema?item_id=1';
       fetch(endpoint)
         .then((response)=>{
@@ -25,17 +26,24 @@ class Schema extends React.Component {
 
     }
 
+    clickHandler = (data) => {
+      console.log("Handler called")
+      console.log(data)
+      let nextLink = 'table?item_id='+data
+      this.props.history.push(nextLink);
+    }
+
     render() {
       let table = null
         if(Object.keys(this.state.data).length !== 0){
-          table = <GridTable tableData={this.state.data}/>
+          table = <GridTable tableData={this.state.data} clickKey='id' itemClick={this.clickHandler.bind(this)}/>
         }
       
       return (
         <div>
           <Header/>
-          <p></p>
-          <br/>
+          <h2 className="pageHead">SCHEMAS</h2>
+          
           {table}
         </div>
       );
